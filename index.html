@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess</title>
+
+    <!-- External CSS for styling the chessboard and game UI -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/chessboard-1.0.0.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Chess</h1>
+        <!-- Footer information about the developer -->
+        <center><p>Made By Siddhartha412</p></center>
+
+        <!-- Chessboard container where the game will be played -->
+        <div class="board" id="board"></div>
+
+        <!-- Buttons for game actions: Restart, Set Position, and Flip Board -->
+        <div class="buttons">
+            <button class="play-again">Play Again</button>
+            <button class="set-pos">Set Position</button>
+            <button class="flip-board">Flip Board</button>
+        </div>
+
+        <!-- Move history display area, showing the logs of moves made -->
+        <div id="move-history" class="move-history">
+            <p><center>Logs:</center></p>
+        </div>
+    </div>
+
+    <!-- jQuery Library for DOM manipulations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Chessboard Library for rendering the board -->
+    <script src="js/chessboard-1.0.0.min.js"></script>
+
+    <!-- Chess.js for chess game logic -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+
+    <!-- Custom JavaScript file to handle game functionality -->
+    <script src="script.js"></script>
+</body>
+
+</html>

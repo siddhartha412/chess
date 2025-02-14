@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Pure black background and dark text */
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000; /* Pure black background */
+    color: #f2f2f2;
+    font-size: 0.9rem; /* Smaller font size */
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    background-color: #000000;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 2px solid #555; /* Grey border */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+    max-width: 380px; /* Smaller container */
+    width: 100%;
+    text-align: center;
+    animation: containerAnimation 1s ease-out; /* Animation for container */
+}
+
+/* Animation for container */
+@keyframes containerAnimation {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Heading style */
+h1 {
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #ffffff; /* White heading color */
+    font-size: 1.2rem; /* Smaller font size for heading */
+}
+
+/* Chessboard section styling */
+.board {
+    width: 100%;
+    max-width: 350px; /* Smaller board */
+    margin: 15px auto;
+}
+
+/* Button group styling */
+.buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Smaller gap */
+}
+
+/* Button styling */
+button {
+    color: #fff;
+    background-color: #000000;
+    border: 2px solid #fff; /* White border outline */
+    width: 100px; /* Smaller buttons */
+    height: 35px; /* Smaller height */
+    border-radius: 6px;
+    font-size: 0.9rem; /* Smaller font size */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background-color: #777; /* Grey background on hover */
+    transform: translateY(-2px); /* Subtle button hover animation */
+    border: 2px solid #fff; /* Maintain white border on hover */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.7); /* Glowing effect on hover */
+}
+
+button:active {
+    transform: translateY(1px); /* Pressed button effect */
+}
+
+/* Move history section styling */
+.move-history {
+    margin-top: 15px;
+    border: 1px solid #444444;
+    padding: 8px;
+    border-radius: 5px;
+    height: 80px;
+    width: 100%;
+    max-width: 350px; /* Smaller history box */
+    overflow-y: auto;
+    background-color: #121212;
+    color: #f2f2f2;
+}
+
+/* Mobile responsiveness: Adjusts layout for smaller screens */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 1rem;
+        width: 90%;
+    }
+
+    .board {
+        width: 100%;
+    }
+
+    .move-history {
+        width: 100%;
+    }
+
+    button {
+        width: 90px; /* Slightly smaller buttons for mobile */
+        font-size: 0.8rem;
+    }
+}
